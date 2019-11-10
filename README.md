@@ -1,5 +1,8 @@
 # myVimrc
-1. install oh-my-vim from this [link](https://github.com/gawel/oh-my-vim)
+1. install oh-my-vim from this [link](https://github.com/gawel/oh-my-vim) or use this command:
+```bash
+   wget --no-check-certificate -O- https://raw.github.com/gawel/oh-my-vim/master/tools/install.sh | sh -
+```
 2. install vim-airline from this [link](https://github.com/vim-airline/vim-airline) or use this command:
 ```bash
    oh-my-vim install vim-airline/vim-airline
