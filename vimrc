@@ -1,3 +1,26 @@
+
+" Added by oh-my-vim
+
+" Change the default leader
+" let mapleader = ","
+
+" Skip upgrade of oh-my-vim itself during upgrades
+" let g:ohmyvim_skip_upgrade=1
+
+" Use :OhMyVim profiles to list all available profiles with a description
+" let profiles = ['defaults', 'django', 'erl', 'friendpaste', 'git', 'makefile', 'map', 'pyramid', 'python', 'ranger', 'tmpl', 'utf8']
+let profiles = ['defaults']
+
+" Path to oh-my-vim binary (take care of it if you are using a virtualenv)
+let g:ohmyvim="/home/mazizian/.oh-my-vim/bin/oh-my-vim"
+
+" load oh-my-vim
+source /home/mazizian/.vim/ohmyvim/ohmyvim.vim
+
+" End of oh-my-vim required stuff
+
+" Put your custom stuff bellow
+
 "Set compatibility to Vim only.
 set nocompatible
 
@@ -54,6 +77,10 @@ highlight LineNr ctermfg=white
 
 " Set status line display
 set laststatus=2
+let g:airline_detect_paste=1
+let g:airline#extensions#tabline#enabled=1
+
+
 hi StatusLine ctermfg=NONE ctermbg=red cterm=NONE
 hi StatusLineNC ctermfg=black ctermbg=red cterm=NONE
 hi User1 ctermfg=black ctermbg=magenta
@@ -96,3 +123,28 @@ set smartcase
 set viminfo='100,<9999,s100
 
 set mouse=a
+
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+hi clear signColumn
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['pylint']
+
+let g:syntastic_error_symbol = '✘'
+let g:syntastic_warning_symbol = "▲"
+augroup mySyntastic
+  au!
+  au FileType tex let b:syntastic_mode = "passive"
+augroup END
+
+let g:airline#extensions#hunks#non_zero_only = 1
+let g:auto_save = 1
