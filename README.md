@@ -1,4 +1,8 @@
-# myVimrc
+# Convert vim to Python IDE
+I've turned my vim text editor into an IDE.
+Using it I can easily write my own Python code.
+You can also prepare the vim for some other programming languages with a little change.
+Do the following to get started and then add the contents of the vimrc file to your .vimrc file.
 1. install oh-my-vim from this [link](https://github.com/gawel/oh-my-vim) or use this command:
 ```bash
    wget --no-check-certificate -O- https://raw.github.com/gawel/oh-my-vim/master/tools/install.sh | sh -
