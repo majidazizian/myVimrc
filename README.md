@@ -1,4 +1,8 @@
 # Convert vim to Python IDE
+
+![GitHub Logo](/images/vim.png)
+
+
 I've turned my vim text editor into an IDE.
 Using it I can easily write my own Python code.
 You can also prepare the vim for some other programming languages with a little change.
